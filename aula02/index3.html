@@ -4,23 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Calculo desconto</title>
+    
 </head>
 <body>
     <h1>Produto com desconto</h1>
-    <form action="">
+    <form class ="formula" action="">
         <label for="Digite o valor do Produto"></label>
         <input type="text">
         <input type="button" value="Calcular">
         <p></p>
     </form>
     <script>
+        /*
+        Neste script iremos calcular um valor de desconto de 10% sobre o preço o produto.
+        O usuario digita o valor do produto e em javascript obtemos o valor ditado no campo (input)
+        e multiplicamos o valor por 0.9(90%) e assim temos o valor final com deconto de 10%.
+         */
+
+         /*
+         criamos três variaveis para relacionar os elementos do formulario, assim realizar os calculos com amsi facilidade.
+         O comando document, fa refrencia ao meu documento html.
+         o comando gerElementsBytagName-> diz que estamos pegando um elemento html por seu nome de Tag. Neste exemplo foi  necessario dizer qual a pasição da tag que se deseja trabalhar.
+         */
         var valorproduto = document.getElementsByTagName("input")[0]
         var calcular = document.getElementsByTagName("input")[1]
         var resultado = document.getElementsByTagName("p")[0]
+
+        /*
+        calcular pe a referencia ao botao calcular que esta no formulario.
+        quando o suario clicar (onclick) no botao será disparado uma execução (function) que realiza o calculo do valo do produto *0.9, ou seja , desconto 10% do valor do produto.
+        o resulta é uma referencia ao (paragrafo) que esta no formulario e dentro dele(innerHTMl) vamos colocar o resultado calculo
+        */
         calcular.onclick = function(){
             resultado.innerHTML = valorproduto.value * 0.9
-        }
+        };
     </script>
 </body>
 </html>
