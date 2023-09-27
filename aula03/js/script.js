@@ -45,26 +45,36 @@ txtinss.onclick=function(){
             rsinss = txtsalario.value * 12/100
         }
         else if(txtsalario.value <= 7507.49){
-            rsinss = txtsalario.value *(14/100)
+            rsinss = txtsalario.value *(14/100);
          }
          else{
             rsinss=7505.49  *(14/100)
          }
 
          if(txtconvenio.value <=2500){
-            rsconvenio = txtsalario.value *(5/100) 
+            rsconvenio = txtsalario.value *(5/100); 
          }
 
          else{
-            rsconvenio = txtsalario.value *(7.5/100)
+            rsconvenio = txtsalario.value *(7.5/100);
          }
 
+         if (txtfilhos.value ==0){
+            rsfilho =0
+         }
+         else{
+            rsfilho = txtsalario.value * (5/100) * txtfilhos.value
+         }
 
+         rsliquido = parseFloat (txtsalario.value) + rsfilho - (rsinss + rsconvenio)   
+        txtliquido.value = rsliquido
 
+        txtinss.value = rsinss
+        txtconvenio.value = rsconvenio
     };
     
     
-    txtliquido.value=rsinss
+    
         
       
     
