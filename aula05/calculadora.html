@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container{
+            
+            
+            background-color: black;
+            color: rgb(88, 152, 204);
+            height: 100vh;
+            text-align: center;
+            padding: 05px;
+                     
+              
+           
+        }
+
+        .calculadora{
+       
+            
+            background-color: blue;
+            position: absolute;
+            border-radius: 15px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);    
+          
+            padding: 20px;
+        }
+        h2{
+            color: blanchedalmond;
+            padding: 05px;
+        }
+        
+        input[type=button]{
+            width: 50px;
+            height: 50px;
+            font-size: 25px;
+            padding: 10px;
+            color: rgb(37, 84, 126);
+            cursor: pointer;
+            margin: 3px;
+            background-color: rgb(236, 234, 238);
+            border-radius: 5px;
+            border: none;
+            transition: 1s;
+        }
+        input[type=button]:hover{
+                background-color: black;
+        }
+        #resultado{
+            color: black;
+            background-color: aliceblue;
+            width: 221px;
+            height: 40px;
+            margin: 5px;
+            padding-top: 15px;
+            text-align: right;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+        <h1>Flavio Santos</h1>
+        <div class="calculadora">
+                <h2 >CALCULADORA</h2>
+            <p id ="resultado">0</p>   
+            <table>
+                 
+                <tr>
+                    
+                    <td><input  type = button value ="7"  id="7"></td>
+                    <td><input  type = button value ="8"  id="8"></td>
+                    <td><input  type  = button value ="9" id="9"></td>
+                    <td><input  type  = button value ="-" id="-"></td>
+                </tr> 
+                <tr> 
+                    <td><input  type = button value ="4"  id="4"></td>
+                    <td><input  type = button value ="5"  id="5"></td>
+                    <td><input  type  = button value ="6" id="6"></td>
+                    <td><input  type  = button value ="+" id="+"></td>
+                </tr>
+                
+                <tr> 
+                    <td><input  type = button value ="1" id="1"></td>
+                    <td><input  type = button value ="2" id="2"></td>
+                    <td><input  type  = button value ="3" id="3"></td>
+                    <td><input  type  = button value ="x" id="x"></td>
+                </tr>
+                <tr>
+                    <td><input  type = button value ="/" id ="/"></td>
+                    <td><input  type = button value ="0" id ="0"></td>
+                    <td><input  type  = button value ="." id="."></td>
+                    <td><input  type  = button value ="=" id = "="></td>
+                </tr>
+            </table>
+
+        </div>
+        
+    </div>   
+    <script src="js/script.js"></script>     
+</body>
+</html>
