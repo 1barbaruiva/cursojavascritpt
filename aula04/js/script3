@@ -1,0 +1,9 @@
+const cidades= [ "leme", "Campinas","Guarulhos"];
+
+console.log(cidades);
+console.log(cidades[0]);
+//adcionar uma cidades com o camando push
+
+cidades.push("Rio de janeiro");
+console.log(cidades[cidades.length - 1]);
+
